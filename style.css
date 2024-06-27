@@ -10,12 +10,12 @@ body{
     font-weight: bold;
 }
 .navdiv{
-    background: rgb(213, 211, 211);
+    background: rgb(230, 216, 230);
     height: 80px;
     width:100%;
 }
 label.logo{
-    color: blue;
+    color:  #19022f;
     font-size: 30px;
     line-height: 60px;
     padding:0 10px;
@@ -34,9 +34,73 @@ label.logo{
     color: #551A8B;
     font-size: 11px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 5px;
     text-transform: uppercase;
 }a.active,a:hover{
     background: #7938b523;
     transition : .5s;
 }
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float : right;
+    line-height :80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+    display: none;
+
+}
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 20px;
+        padding-left: 50px;
+    }
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: relative;
+        width: 1px;
+        height: 100vh;
+        background: rgba(60, 11, 107, 0.14);
+        top: 85px;
+        right: 190%;
+        text-align: left;
+        transition: all 0.5s;
+        padding-left: 90%;
+    }
+    nav ul {
+        list-style-type: unset; /* Remove default list styles */
+        padding: 0; /* Remove default padding */
+    }
+    nav ul li {
+        display: block;
+        margin: 20px 10px; /* Adjusted margin */
+        line-height: 1.5; /* Changed to a relative unit */
+    }
+    nav ul li a {
+        font-size: 16px; /* Adjusted font size */
+        display: block; /* Display links as block-level elements */
+        padding: 10px; /* Added padding for better spacing */
+    }
+    a:hover,
+    a.active {
+        background-image: rgb(223, 166, 243);
+        color: black;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    section {
+        background: url('help.png') no-repeat;
+        background-size: cover;
+        height: calc(100vh - 80px);
+    }
+    
+}
+
